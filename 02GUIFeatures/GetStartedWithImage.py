@@ -1,7 +1,7 @@
 import cv2 as cv
 import sys
 
-img = cv.imread(cv.samples.findFile("img/camera.jpg"), cv.IMREAD_UNCHANGED)
+img = cv.imread(cv.samples.findFile("../img/camera.jpg"), cv.IMREAD_UNCHANGED)
 # the second parameter has multi values
 # the most useful are cv.IMREAD_COLOR, cv.IMREAD_UMCHANGED, cv.GRAYSCALE
 
