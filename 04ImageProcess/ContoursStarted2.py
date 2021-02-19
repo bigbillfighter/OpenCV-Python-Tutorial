@@ -9,14 +9,17 @@ a_copy = a.copy()
 a_gray = cv.cvtColor(a, cv.COLOR_BGR2GRAY)
 ret, threshold = cv.threshold(a_gray, 127, 255, cv.THRESH_BINARY)
 contours, hierarchy = cv.findContours(threshold, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
-cv.drawContours(a, contours,-1, (0, 255, 0), 2)
+cv.drawContours(a, contours, 0, (0, 255, 0), 2)
+
 # plt.imshow(a, cmap='gray'), plt.xticks([]), plt.yticks([])
 # plt.show()
 
 a_gray = cv.cvtColor(a_copy, cv.COLOR_BGR2GRAY)
 ret, threshold = cv.threshold(a_gray, 127, 255, cv.THRESH_BINARY)
 contours, hierarchy = cv.findContours(threshold, cv.RETR_TREE, cv.CHAIN_APPROX_NONE)
-cv.drawContours(a_copy, contours,-1, (0, 255, 0), 2)
+cnt = contours[0]
+cv.drawContours(a_copy, [cnt], 0, (0, 255, 0), 2)
+# cv.circle(a_copy, ())
 
 plt.subplot(121), plt.imshow(a)
 plt.title('SIMPLE'), plt.xticks([]), plt.yticks([])
