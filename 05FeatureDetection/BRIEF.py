@@ -7,7 +7,8 @@ from matplotlib import pyplot as plt
 # is to find a binary string to describe the keypoints, then we can use logical operation
 # like XOR to match, which is very fast in modern CPU with SSE instructions.
 
-# So in BRIEF(Binary Robust Independent Element Features), we find a set of n location pairs in a unique way which is detailed illustrated
+# So in BRIEF(Binary Robust Independent Element Features), we find a set of n location pairs
+# in a unique way which is detailed illustrated
 # in the paper. For each pair, if I(p) < I(q), we get a 1, other wise 0. So the result is a
 # binary string to describe the keypoint.
 
